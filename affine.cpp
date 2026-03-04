@@ -222,7 +222,7 @@ Matrix transformMenu()
                 break;
             default:
                 // invalid choice entered
-                cout << "Invalid choice. Please enter T, R, S, or D." << endl;
+                cout << "Invalid choice. Please try again" << endl;
                 break;
         }
 
