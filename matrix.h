@@ -13,6 +13,7 @@
 #define MATRIX_H
 #include <iostream>
 #include <iomanip>
+#include <stdexcept>
 
 class Matrix 
 {
