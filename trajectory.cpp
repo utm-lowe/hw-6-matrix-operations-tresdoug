@@ -78,6 +78,8 @@ int main() {
     // Store the trajectory
     vector<Matrix> trajectory;
 
+    trajectory.push_back(position);
+
     // Run the simulation
     for (int i = 0; i < steps; ++i) {
         // TODO: You need to provide code to implement the physics simulation.
@@ -88,6 +90,21 @@ int main() {
         // 3. If the current position exceeds the grid height, update the grid
         //    height to the y coordinate + 1.
         // YOUR CODE HERE
+        position = position + velocity * deltaTime;
+        velocity = velocity + gravity * deltaTime;
+
+        if(position.at(1,0) >= gridHeight){
+            gridHeight = static_cast<int>(position.at(1,0)) + 1;
+        }
+
+        if (position.at(0,0) >= gridWidth) {
+        gridWidth = static_cast<int>(position.at(0,0)) + 1;
+        }  
+        
+        if (position.at(1,0) <= 0.0){
+            break;
+        }
+
 
         // We will be talking about the vector object a little later. If you 
         // want to read ahead though, I encourage that!
