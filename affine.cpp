@@ -221,7 +221,6 @@ Matrix transformMenu()
             case 'D':
                 break;
             default:
-                cout << "Invaild choice. Please enter T, R, S, or D." << endl;
                 break;
         }
 
