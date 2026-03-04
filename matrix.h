@@ -200,10 +200,6 @@ Matrix operator*(const Matrix& m1, const Matrix& m2){
     int r2 = m2.getRows();
     int c2 = m2.getCols();
 
-    if (c1 != r2) {
-        throw std::invalid_argument("Matrix dimensions do not allow multiplication");
-    }
-
     Matrix result(r1, c2);
 
     for (int i = 0; i < r1; i++) {
