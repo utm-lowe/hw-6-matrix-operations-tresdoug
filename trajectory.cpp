@@ -25,7 +25,7 @@ void plotTrajectory(const vector<Matrix>& trajectory, int gridWidth, int gridHei
 
         // Ensure the coordinates are within the grid bounds
         if (x >= 0 && x < gridWidth && y >= 0 && y < gridHeight) {
-            grid[gridHeight - 1 - y][x] = '*'; // Plot the object (inverted y-axis for display)
+            grid[gridHeight - 1 - y][x] = '*'; // Plot the object
         }
     }
 
@@ -78,7 +78,7 @@ int main() {
     // Store the trajectory
     vector<Matrix> trajectory;
 
-    trajectory.push_back(position);
+    //trajectory.push_back(position);
 
     // Run the simulation
     for (int i = 0; i < steps; ++i) {
@@ -100,16 +100,15 @@ int main() {
         if (position.at(0,0) >= gridWidth) {
         gridWidth = static_cast<int>(position.at(0,0)) + 1;
         }  
-        
-        if (position.at(1,0) <= 0.0){
-            break;
-        }
-
 
         // We will be talking about the vector object a little later. If you 
         // want to read ahead though, I encourage that!
         // Store the current position
         trajectory.push_back(position);
+
+        if (position.at(1,0) <= 0.0){
+            break;
+        }
     }
 
     // Plot the trajectory

@@ -219,6 +219,9 @@ Matrix transformMenu()
                 result = transScale(x, y) * result;
                 break;
             case 'D':
+            default:
+                cout << "Invalid choice. Please try again." << endl;
+                break;
                 // Done, do nothing
                 break;
         }
