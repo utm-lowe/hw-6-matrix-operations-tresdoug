@@ -64,7 +64,7 @@ jobs:
       uses: classroom-resources/autograding-io-grader@v1
       with:
         test-name: trajectory 1
-        setup-command: make trajectory
+        setup-command: g++ trajectory.cpp -o trajectory
         command: "./trajectory"
         input: |-
           0 0
@@ -102,7 +102,7 @@ jobs:
       uses: classroom-resources/autograding-io-grader@v1
       with:
         test-name: trajectory 2
-        setup-command: make trajectory
+        setup-command: g++ trajectory.cpp -o trajectory
         command: "./trajectory"
         input: |-
           0 25
@@ -169,7 +169,7 @@ jobs:
       uses: classroom-resources/autograding-io-grader@v1
       with:
         test-name: affine 2
-        setup-command: make affine
+        setup-command: g++ affine.cpp -o affine
         command: "./affine"
         input: |-
           Q
@@ -186,7 +186,7 @@ jobs:
       uses: classroom-resources/autograding-io-grader@v1
       with:
         test-name: affine 3
-        setup-command: make affine
+        setup-command: g++ affine.cpp -o affine
         command: "./affine"
         input: "T 2 3\nR 45\nS 2 1\nD\n1 1 \n2 3 \n-1 1\n0 12"
         expected-output: "(T)ranslate, (R)otate, (S)cale, or (D)one? Enter the x and
