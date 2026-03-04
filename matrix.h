@@ -61,7 +61,10 @@ public:
      * 
      */
     virtual ~Matrix(){
-
+        for(int i = 0; i < m; i++){
+            delete[] ar[i];
+        }
+        delete[] ar;
     }
 
     /**
