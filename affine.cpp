@@ -204,17 +204,17 @@ Matrix transformMenu()
         // YOUR CODE HERE
         switch (choice) {
             case 'T':
-                cout << "Translation (tx ty): ";
+                cout << "Enter the x and y translation: ";
                 cin >> x >> y;
                 result = translate(x, y) * result;
                 break;
             case 'R':
-                cout << "Rotation (angle in degrees): ";
+                cout << "Enter the angle of rotation (degrees) ";
                 cin >> angle;
                 result = transRotate(angle) * result;
                 break;
             case 'S':
-                cout << "Scaling (sx sy): ";
+                cout << "Enter the x and y scaling factors: ";
                 cin >> x >> y;
                 result = transScale(x, y) * result;
                 break;
@@ -242,7 +242,7 @@ Matrix getPoint()
     // Return your matrix at the end of the function.
     // YOUR CODE HERE
     double x, y;
-    cout << "Enter a point (x y): ";
+    cout << "Enter x and y: ";
     cin >> x >> y;
     Matrix point(3, 1);
     point.at(0, 0) = x;
